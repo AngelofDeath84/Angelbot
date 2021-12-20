@@ -769,6 +769,79 @@ console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
 break	
+
+case 'rankbeautiful':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas bonitos del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break	
+					
+case 'rankflojos':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas flojos del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break					
+					
+case 'rankbull':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas cornudos del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break					
+					
+case 'rankmandilon':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas mandilones del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break					
+					
 					
 					
 /******JUEGOS SHANDUY LA PUTA MADRE NO TE OLVIDES******/					
