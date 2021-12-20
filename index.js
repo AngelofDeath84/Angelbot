@@ -750,8 +750,27 @@ mentions(teks, d, true)
 console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
-break				
-											
+break	
+					
+case 'rankfeos':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas feos del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break	
+					
+					
 /******JUEGOS SHANDUY LA PUTA MADRE NO TE OLVIDES******/					
 					
 					
@@ -1597,7 +1616,7 @@ break
                   }
 
 		if (budy.includes(`Buenos dias`)) {
-                  reply(`Buenos Dias trolos de mierda`)
+                  reply(`Buenos Dias hijos del pecado adictos a la lujuria y la mala vida`)
                   }
 
 		if (budy.includes(`Bot gay`)) {
@@ -1605,7 +1624,7 @@ break
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`De nada padre`)
+                  reply(`De nada BOMBON`)
                   }
 
 		if (budy.includes(`Bien gracias y tu?`)) {
