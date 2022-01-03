@@ -259,7 +259,7 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`
+				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y a divertirse 🥳*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -842,7 +842,42 @@ reply('Hubo un error intentalo nuevamente :/')
 }
 break					
 					
-					
+case 'rankborrachos':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas baorrachos del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break					
+
+case 'ranksexys':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 5 de los mas sexys del grupo\n\n'
+for(i = 0; i < 5; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}	
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break					
+	
 					
 /******JUEGOS SHANDUY LA PUTA MADRE NO TE OLVIDES******/					
 					
@@ -1688,8 +1723,8 @@ break
                   reply(`Si amigo todo bien, vite`)
                   }
 
-		if (budy.includes(`Buenos dias`)) {
-                  reply(`Buenos Dias hijos del pecado adictos a la lujuria y la mala vida`)
+		if (budy.includes(`Buenos días`)) {
+                  reply(`Buenos días hijos del pecado adictos a la lujuria y la mala vida`)
                   }
 
 		if (budy.includes(`Bot gay`)) {
@@ -1697,7 +1732,7 @@ break
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`De nada BOMBON`)
+                  reply(`De nada BRO`)
                   }
 
 		if (budy.includes(`Bien gracias y tu?`)) {
